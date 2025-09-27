@@ -55,7 +55,7 @@ export default function Hero() {
             </span>
             .
           </h1>
-          <p className="mt-4 sm:mt-5 text-sm sm:text-base md:text-lg fredoka text-center text-white/90">
+          <p className="my-5 md:my-5 text-sm sm:text-base md:text-lg fredoka text-center text-white/90">
             Where simplicity meets sophistication and every bite tells a story.
           </p>
 
