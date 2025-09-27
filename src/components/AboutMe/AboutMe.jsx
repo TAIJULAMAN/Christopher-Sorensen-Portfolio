@@ -4,7 +4,7 @@ export default function AboutMe() {
   return (
     <section id="about" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="rounded-3xl bg-[#F7F1EF] shadow-sm ring-1 ring-black/5 overflow-hidden">
+        <div className="bg-[#F7F1EF] shadow-sm ring-1 ring-black/5 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
             {/* Image side */}
             <div className="relative md:min-h-full md:col-span-1">
@@ -14,11 +14,11 @@ export default function AboutMe() {
                 className="block md:absolute md:inset-0 w-full h-auto md:h-full object-contain md:object-cover"
               />
               {/* Rounded corners */}
-              <div className="hidden md:block absolute inset-0 rounded-3xl md:rounded-r-none md:rounded-l-3xl ring-1 ring-black/5 pointer-events-none" />
+              {/* <div className="hidden md:block absolute inset-0 rounded-3xl md:rounded-r-none md:rounded-l-3xl ring-1 ring-black/5 pointer-events-none" /> */}
             </div>
 
             {/* Content side */}
-            <div className="px-5 md:px-10 py-5 md:py-10 md:col-span-2">
+            <div className="px-5 md:px-10 py-5 md:py-10 md:col-span-2 rounded-l-3xl">
               <h1 className="text-2xl md:text-5xl font-bold">About Me</h1>
               <div className="mt-5 space-y-5">
                 <p>

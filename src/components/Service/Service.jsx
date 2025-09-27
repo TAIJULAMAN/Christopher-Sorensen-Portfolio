@@ -27,11 +27,11 @@ export default function Service() {
   return (
     <>
       <section id="services" className=" bg-[#093d35]">
-        <div className="container mx-auto px-5">
+        <div className="">
           <div className="rounded-none md:rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-12">
               {/* Left intro */}
-              <div className="lg:col-span-4 p-6 sm:p-8 md:p-10 text-white flex items-center">
+              <div className="lg:col-span-4 p-5 md:p-10 lg:pl-[200px] text-white flex items-center">
                 <div>
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold leading-tight fredoka">
                     WHAT I CAN CREATE FOR YOU
@@ -46,9 +46,9 @@ export default function Service() {
               </div>
 
               {/* Right list of services */}
-              <div className="lg:col-span-8 border-l border-b border-white/20 mb-10">
+              <div className="lg:col-span-8 border-l-2 border-white mb-10 ">
                 {/* Scrollable row on small screens, grid on large */}
-                <div className="flex gap-6 overflow-x-auto px-6 py-8 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:px-8 lg:py-10">
+                <div className="flex gap-5 lg:pr-[200px] overflow-x-auto px-6 py-8 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:px-8 lg:py-10">
                   {services.map((s) => (
                     <article
                       key={s.title}
@@ -63,16 +63,18 @@ export default function Service() {
                         />
                       </div>
                       <div className="p-4">
-                        <h3 className="text-sm sm:text-base font-semibold text-[#111827]">
+                        <h3 className="text-sm sm:text-base font-semibold text-[#111827] fredoka">
                           {s.title}
                         </h3>
-                        <p className="mt-2 text-xs sm:text-sm text-[#374151]">
+                        <p className="mt-2 text-xs sm:text-sm text-[#374151] fredoka">
                           {s.desc}
                         </p>
                       </div>
                     </article>
                   ))}
                 </div>
+                {/* Bottom divider that ends at the right edge of the cards area */}
+                <div className="border-b-2 border-white w-full" />
               </div>
             </div>
           </div>

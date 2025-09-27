@@ -6,6 +6,7 @@ import Works from "./components/Works/Works";
 import Service from "./components/Service/Service";
 import Footer from "./common/Footer/Footer";
 import Navbar from "./common/Navbar/Navbar";
+import ContactMe from "./components/ContactMe/ContactMe";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <AboutMe />
       <Works />
       <Service />
+      <ContactMe />
       <Footer />
     </>
   );
