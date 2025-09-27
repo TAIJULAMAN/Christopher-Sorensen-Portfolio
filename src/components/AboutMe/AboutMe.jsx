@@ -7,14 +7,14 @@ export default function AboutMe() {
         <div className="rounded-3xl bg-[#F7F1EF] shadow-sm ring-1 ring-black/5 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
             {/* Image side */}
-            <div className="relative min-h-[260px] sm:min-h-[320px] md:min-h-full md:col-span-1">
+            <div className="relative md:min-h-full md:col-span-1">
               <img
                 src="/about.png"
                 alt="About Christopher in the orchard"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="block md:absolute md:inset-0 w-full h-auto md:h-full object-contain md:object-cover"
               />
               {/* Rounded corners */}
-              <div className="absolute inset-0 rounded-3xl md:rounded-r-none md:rounded-l-3xl ring-1 ring-black/5 pointer-events-none" />
+              <div className="hidden md:block absolute inset-0 rounded-3xl md:rounded-r-none md:rounded-l-3xl ring-1 ring-black/5 pointer-events-none" />
             </div>
 
             {/* Content side */}
@@ -82,3 +82,4 @@ export default function AboutMe() {
     </section>
   );
 }
+
