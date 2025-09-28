@@ -46,7 +46,7 @@ export default function Service() {
               </div>
 
               {/* Right list of services */}
-              <div className="lg:col-span-8 border-l-2 border-white mb-10 ">
+              <div className="lg:col-span-8 md:border-l-2 border-white mb-10 ">
                 {/* Scrollable row on small screens, grid on large */}
                 <div className="flex gap-5 lg:pr-[200px] overflow-x-auto px-6 py-8 snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:px-8 lg:py-10">
                   {services.map((s) => (
@@ -74,7 +74,7 @@ export default function Service() {
                   ))}
                 </div>
                 {/* Bottom divider that ends at the right edge of the cards area */}
-                <div className="border-b-2 border-white w-full" />
+                <div className="md:border-b-2 border-white w-full" />
               </div>
             </div>
           </div>

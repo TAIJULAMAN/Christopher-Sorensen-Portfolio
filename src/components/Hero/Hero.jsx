@@ -42,9 +42,9 @@ export default function Hero() {
       </svg>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 flex items-center justify-center min-h-[70vh] sm:min-h-[78vh] md:min-h-[82vh]">
+      <div className="relative z-10 container mx-auto px-5 md:px-0 flex items-center justify-center min-h-[70vh] sm:min-h-[78vh] md:min-h-[82vh]">
         <div className="max-w-5xl text-white text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold actor leading-tight">
+          <h1 className="text-xl md:text-6xl font-semibold actor leading-tight">
             Elevating simple ingredients
             <br />
             into extraordinary

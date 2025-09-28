@@ -151,11 +151,11 @@ export default function ContactMe() {
         </div>
 
         {/* Part 3: Picture */}
-        <div className="lg:col-span-4 relative min-h-[360px]">
+        <div className="lg:col-span-4 relative md:min-h-[360px]">
           <img
             src="/contact.png"
             alt="Portrait"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full h-auto md:absolute md:inset-0 md:w-full md:h-full object-contain md:object-cover"
           />
         </div>
       </div>

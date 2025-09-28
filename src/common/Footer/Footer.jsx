@@ -1,119 +1,56 @@
 import React from "react"
-import { Instagram, Facebook, Youtube } from "lucide-react"
+// import footerLogo from "../../assets/footer-logo.png"
 
 export default function Footer() {
+    // Dynamic QR code for Cristofer's portfolio (no external packages)
+    const portfolioUrl = "https://parvesmosarof.netlify.app/"
+    const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${encodeURIComponent(
+        portfolioUrl
+    )}&margin=20` // high-res, crisp QR
     return (
-        <footer className="bg-black text-white relative overflow-hidden">
-            {/* Background FASIFY text */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="text-[12rem] md:text-[16rem] lg:text-[20rem] font-bold text-gray-800/20 select-none">
-                    FASIFY
-                </div>
-            </div>
-
-            <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-                {/* Main footer content */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                    {/* Company Section */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">Company</h3>
-                        <ul className="space-y-3">
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    About FASIFY
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Service Provider
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Offers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    List Your Property
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Partnership
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Social Section */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">Social</h3>
-                        <ul className="space-y-3">
-                            <li>
-                                <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                                    <Instagram className="w-4 h-4 text-pink-500" />
-                                    Instagram
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                                    <Facebook className="w-4 h-4 text-blue-500" />
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                                    <Youtube className="w-4 h-4 text-red-500" />
-                                    Youtube
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Terms & Settings Section */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">Terms & Settings</h3>
-                        <ul className="space-y-3">
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Privacy & Cookies
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Terms & Condition
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Help Section */}
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">Help</h3>
-                        <ul className="space-y-3">
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Cancel You Reservation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                                    Refund Timeline, Policies & Process
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+        <footer className="bg-[#0b141c] text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-14 lg:py-16">
+                {/* Top: Logo and tagline - stacks on mobile, aligned on md+ */}
+                <div className="flex flex-col items-center gap-2 md:gap-0 md:flex-row md:items-start md:justify-between">
+                    <div className="hidden md:block w-24 md:w-32" />
+                    <img
+                        src={"/logo.png"}
+                        alt="Brand Logo"
+                        className="h-8 md:h-10"
+                    />
+                    <p className="mt-2 md:mt-0 text-[10px] md:text-xs lg:text-sm text-gray-300/90 leading-snug text-center md:text-right max-w-[90%] sm:max-w-[420px]">
+                        Trusted chef delivering flavors you’ll never forget.
+                    </p>
                 </div>
 
-                {/* Contact Us Button */}
-                <div className="flex justify-end mb-8">
-                    {/* <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">Contact Us</Button> */}
+                {/* Middle: QR card and links in one row (stack on mobile) */}
+                <div className="mt-8 sm:mt-10 md:mt-14 flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-14">
+                    {/* QR Card */}
+                    <div className="relative bg-white rounded-3xl p-2 sm:p-3 md:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
+                        <img
+                            src={qrSrc}
+                            alt="QR Code to Cristofer's portfolio"
+                            className="w-36 h-36 sm:w-44 sm:h-44 md:w-60 md:h-60 object-contain"
+                        />
+                        {/* <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                            <div className="bg-black text-white px-4 md:px-6 py-2 rounded-md text-[10px] md:text-sm font-semibold tracking-wider shadow-lg">
+                                SCAN ME
+                            </div>
+                        </div> */}
+                    </div>
+
+                    {/* Links (right of QR on md+, centered below on mobile) */}
+                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-gray-300 text-xs sm:text-sm md:text-base">
+                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                        <span className="hidden md:inline-block w-px h-5 bg-gray-600" aria-hidden="true" />
+                        <span className="md:hidden text-gray-500" aria-hidden="true">|</span>
+                        <a href="#" className="hover:text-white transition-colors">Terms and condition</a>
+                    </div>
                 </div>
 
                 {/* Copyright */}
-                <div className="text-center text-gray-400 text-sm border-t border-gray-800 pt-6">
-                    © 2025, FASIFY, All Rights Reserved.
+                <div className="mt-8 sm:mt-10 md:mt-14 text-center text-gray-400 text-[10px] sm:text-xs md:text-sm">
+                    Copyright © {new Date().getFullYear()}. All rights reserved.
                 </div>
             </div>
         </footer>

@@ -25,7 +25,11 @@ const works = [
 
 export default function Works() {
   return (
-    <section id="works" className="py-12 sm:py-16 md:py-20 bg-white">
+    <section
+      id="works"
+      style={{ backgroundImage: "url('/Vector.png')" }}
+      className="py-12 sm:py-16 md:py-20 bg-white bg-no-repeat bg-right-top "
+    >
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto">

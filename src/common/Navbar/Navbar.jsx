@@ -1,33 +1,93 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const navItems = ["Home", "About Me", "Portfolio", "Services", "Contact"];
+  // Map labels to section IDs present in the page
+  const navItems = useMemo(
+    () => [
+      { label: "Home", id: "home" },
+      { label: "About Me", id: "about" },
+      // Portfolio grid lives in Works.jsx with id="works"
+      { label: "Portfolio", id: "works" },
+      { label: "Services", id: "services" },
+      { label: "Contact", id: "contact" },
+    ],
+    []
+  );
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState("Home");
+
+  const headerOffset = 80; // adjust for fixed header height
+
+  const handleNavigate = (item) => {
+    const el = document.getElementById(item.id);
+    // Scroll to top for Home or when the target element is not found
+    if (item.id === "home" || !el) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActive(item.label);
+      setIsMobileMenuOpen(false);
+      return;
+    }
+    const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+    window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    setActive(item.label);
+    setIsMobileMenuOpen(false);
+  };
+
+  // Observe sections to update active nav link on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const hit = navItems.find((n) => n.id === entry.target.id);
+            if (hit) setActive(hit.label);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: `-${headerOffset + 10}px 0px -60% 0px`,
+        threshold: 0.1,
+      }
+    );
+
+    navItems.forEach((n) => {
+      const el = document.getElementById(n.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [navItems]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[9999] bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center select-none">
+          <button
+            className="flex items-center select-none"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            aria-label="Go to top"
+          >
             <img src="/logo.png" alt="logo" />
-          </div>
+          </button>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6" role="navigation" aria-label="Primary">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => setActive(item)}
+                key={item.id}
+                onClick={() => handleNavigate(item)}
                 className={`text-sm font-medium transition-colors ${
-                  active === item
+                  active === item.label
                     ? "text-orange-400 underline underline-offset-4"
-                    : "text-white/90 hover:text-orange-300"
+                    : "text-slate-500 hover:text-orange-300"
                 }`}
               >
-                {item}
+                {item.label}
               </button>
             ))}
           </nav>
@@ -37,6 +97,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded hover:bg-white/10 text-gray-200"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -48,22 +109,19 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-white/10 bg-black">
+          <div className="md:hidden border-top border-white/10 bg-black">
             <div className="px-4 py-3 space-y-1">
               {navItems.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => {
-                    setActive(item);
-                    setIsMobileMenuOpen(false);
-                  }}
+                  key={item.id}
+                  onClick={() => handleNavigate(item)}
                   className={`w-full text-left px-2 py-3 rounded text-sm font-medium transition-colors ${
-                    active === item
+                    active === item.label
                       ? "text-orange-400"
                       : "text-gray-200 hover:text-orange-300"
                   }`}
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
             </div>
