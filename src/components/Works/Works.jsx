@@ -4,22 +4,22 @@ const works = [
   {
     title: "Harmony Feast",
     caption: "A balanced mix of flavors and textures",
-    img: "/1.png",
+    img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Dragon's Delight",
     caption: "A balanced mix of flavors and textures",
-    img: "/2.png",
+    img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Savor Symphony",
     caption: "A balanced mix of flavors and textures",
-    img: "/3.png",
+    img: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Zen Garden Platter",
     caption: "A balanced mix of flavors and textures",
-    img: "/4.png",
+    img: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
