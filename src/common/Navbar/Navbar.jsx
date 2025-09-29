@@ -81,7 +81,7 @@ export default function Navbar() {
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-bold transition-colors ${
                   active === item.label
                     ? "text-orange-400 underline underline-offset-4"
                     : "text-slate-500 hover:text-orange-300"

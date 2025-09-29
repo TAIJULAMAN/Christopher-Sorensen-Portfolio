@@ -3,15 +3,11 @@ import React from "react"
 
 export default function Footer() {
     // Dynamic QR code for Cristofer's portfolio (no external packages)
-    const portfolioUrl = "https://parvesmosarof.netlify.app/"
-    const qrSrc = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${encodeURIComponent(
-        portfolioUrl
-    )}&margin=20` // high-res, crisp QR
     return (
         <footer className="bg-[#0b141c] text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-14 lg:py-16">
                 {/* Top: Logo and tagline - stacks on mobile, aligned on md+ */}
-                <div className="flex flex-col items-center gap-2 md:gap-0 md:flex-row md:items-start md:justify-between">
+                <div className="flex flex-col items-center gap-2">
                     <div className="hidden md:block w-24 md:w-32" />
                     <img
                         src={"/logo.png"}
@@ -23,23 +19,8 @@ export default function Footer() {
                     </p>
                 </div>
 
-                {/* Middle: QR card and links in one row (stack on mobile) */}
                 <div className="mt-8 sm:mt-10 md:mt-14 flex flex-col md:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-14">
-                    {/* QR Card */}
-                    <div className="relative bg-white rounded-3xl p-2 sm:p-3 md:p-4 shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
-                        <img
-                            src={qrSrc}
-                            alt="QR Code to Cristofer's portfolio"
-                            className="w-36 h-36 sm:w-44 sm:h-44 md:w-60 md:h-60 object-contain"
-                        />
-                        {/* <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                            <div className="bg-black text-white px-4 md:px-6 py-2 rounded-md text-[10px] md:text-sm font-semibold tracking-wider shadow-lg">
-                                SCAN ME
-                            </div>
-                        </div> */}
-                    </div>
 
-                    {/* Links (right of QR on md+, centered below on mobile) */}
                     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-gray-300 text-xs sm:text-sm md:text-base">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <span className="hidden md:inline-block w-px h-5 bg-gray-600" aria-hidden="true" />
@@ -48,7 +29,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Copyright */}
                 <div className="mt-8 sm:mt-10 md:mt-14 text-center text-gray-400 text-[10px] sm:text-xs md:text-sm">
                     Copyright © {new Date().getFullYear()}. All rights reserved.
                 </div>

@@ -73,14 +73,12 @@ export default function ContactMe() {
 
           {/* Available Hours */}
           <div className="mt-8">
-            <h4 className="text-sm font-semibold text-[#111827]/80 fredoka">
-              Available Hours
+            <h4 className="text-xl font-bold text-[#111827]/80 fredoka">
+              Email
             </h4>
-            <ul className="mt-2 space-y-1 text-sm text-[#111827] fredoka">
-              <li>Monday – Friday: 09:00 AM – 5:00 PM</li>
-              <li>Saturday: 10:00 AM – 6:00 PM</li>
-              <li>Sunday: Day off</li>
-            </ul>
+            <p className="mt-2 space-y-1 text-base text-[#111827] fredoka">
+              christophersoren@gmail.com
+            </p>
           </div>
         </div>
 
