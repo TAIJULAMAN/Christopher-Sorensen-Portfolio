@@ -1,8 +1,5 @@
 import React from "react"
-// import footerLogo from "../../assets/footer-logo.png"
-
 export default function Footer() {
-    // Dynamic QR code for Cristofer's portfolio (no external packages)
     return (
         <footer className="bg-[#0b141c] text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-14 lg:py-16">
