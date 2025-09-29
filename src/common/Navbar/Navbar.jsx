@@ -17,6 +17,7 @@ export default function Navbar() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState("Home");
+  const [scrolled, setScrolled] = useState(false);
 
   const headerOffset = 80; // adjust for fixed header height
 
@@ -62,8 +63,24 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [navItems]);
 
+  // Toggle blurred background on scroll
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    onScroll(); // initialize on mount
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-[9999] bg-transparent">
+    <header
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-colors duration-300 ${
+        scrolled || isMobileMenuOpen
+          ? "backdrop-blur-md bg-black/40 border-b border-white/10"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -76,7 +93,7 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6" role="navigation" aria-label="Primary">
+          <nav className="hidden md:flex items-center gap-5" role="navigation" aria-label="Primary">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -84,7 +101,7 @@ export default function Navbar() {
                 className={`text-sm font-bold transition-colors ${
                   active === item.label
                     ? "text-orange-400 underline underline-offset-4"
-                    : "text-slate-500 hover:text-orange-300"
+                    : "text-white hover:text-orange-300"
                 }`}
               >
                 {item.label}
