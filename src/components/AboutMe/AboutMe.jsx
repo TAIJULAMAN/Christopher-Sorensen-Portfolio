@@ -5,18 +5,18 @@ export default function AboutMe() {
     <section id="about" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="bg-[#F7F1EF] shadow-sm ring-1 ring-black/5 overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
             {/* Image side */}
-            <div className="relative md:col-span-1 md:flex md:items-center md:justify-center">
+            <div className="relative md:col-span-1 md:flex md:items-start md:justify-start">
               <img
                 src="/about.png"
                 alt="About Christopher in the orchard"
-                className="block w-full h-auto md:max-h-[600px] object-contain md:object-center"
+                className="block w-[100%] h-auto md:max-h-[655px] object-contain md:object-start"
               />
             </div>
 
             {/* Content side */}
-            <div className="px-5 md:px-10 py-5 md:py-10 md:col-span-2 rounded-l-3xl">
+            <div className="px-5 md:px-10 py-5 md:py-10 md:col-span-3 rounded-l-3xl">
               <h1 className="text-2xl md:text-5xl font-bold">About Me</h1>
               <div className="mt-5 space-y-5">
                 <p>

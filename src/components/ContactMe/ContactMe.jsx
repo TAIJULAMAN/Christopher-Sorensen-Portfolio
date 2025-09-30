@@ -29,28 +29,28 @@ export default function ContactMe() {
           {/* Socials */}
           <div className="mt-8 flex items-center gap-3">
             <a
-              href="#"
+              href="https://www.facebook.com/christopher.m.sorensen"
               aria-label="Facebook"
               className=" p-2 rounded-full bg-[#111827] text-white transition"
             >
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/christopher_m_sorensen/"
               aria-label="Instagram"
               className="p-2 rounded-full bg-[#111827] text-white transition"
             >
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://x.com/_csorensen"
               aria-label="X"
               className="p-2 rounded-full bg-[#111827] text-white transition"
             >
               <Twitter className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/cmsorensen/"
               aria-label="LinkedIn"
               className="p-2 rounded-full bg-[#111827] text-white transition"
             >
@@ -70,8 +70,7 @@ export default function ContactMe() {
               />
             </div>
           </div>
-
-          {/* Available Hours */}
+          {/* Email */}
           <div className="mt-8">
             <h4 className="text-xl font-bold text-[#111827]/80 fredoka">
               Email
@@ -139,7 +138,7 @@ export default function ContactMe() {
             </div>
             <button
               type="submit"
-              mailto=""
+              mailto="mdshahamanpatwary"
               className="justify-center fredoka inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-md shadow shadow-orange-900/30 transition"
             >
               Submit

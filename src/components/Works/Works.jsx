@@ -16,14 +16,9 @@ const works = [
     caption: "A diet based on flavor, but is naturally healthy.",
     img: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=1200&q=80",
   },
-  // {
-  //   title: "Zen Garden Platter",
-  //   caption: "A balanced mix of flavors and textures",
-  //   img: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80",
-  // },
   {
-    title: "Butter Poached Fish",
-    caption: "poach fish in butter, which is actually really simple.",
+    title: "Mediterranean Diet",
+    caption: "Meat and fish have their place on the plate as well.",
     img: "/fish.jpg",
   },
 ];
