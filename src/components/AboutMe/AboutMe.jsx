@@ -7,14 +7,12 @@ export default function AboutMe() {
         <div className="bg-[#F7F1EF] shadow-sm ring-1 ring-black/5 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
             {/* Image side */}
-            <div className="relative md:min-h-full md:col-span-1">
+            <div className="relative md:col-span-1 md:flex md:items-center md:justify-center">
               <img
                 src="/about.png"
                 alt="About Christopher in the orchard"
-                className="block md:absolute md:inset-0 w-full h-auto md:h-full object-contain md:object-cover"
+                className="block w-full h-auto md:max-h-[600px] object-contain md:object-center"
               />
-              {/* Rounded corners */}
-              {/* <div className="hidden md:block absolute inset-0 rounded-3xl md:rounded-r-none md:rounded-l-3xl ring-1 ring-black/5 pointer-events-none" /> */}
             </div>
 
             {/* Content side */}
@@ -64,7 +62,7 @@ export default function AboutMe() {
                   connected to nature, and crafted with both pleasure and
                   responsibility in mind.
                 </p>
-                <p>
+                {/* <p>
                   avor, creating dishes that are vibrant, nourishing, and
                   grounded in a respect for ingredients at their peak. Drawing
                   on three decades of experience, Christopher brings together
@@ -73,7 +71,7 @@ export default function AboutMe() {
                   delicious food. His vision is clear: food should be honest,
                   connected to nature, and crafted with both pleasure and
                   responsibility in mind.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

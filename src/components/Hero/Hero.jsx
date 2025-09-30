@@ -6,9 +6,9 @@ export default function Hero() {
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero.png')",
+          backgroundImage: "url('/c2.jpeg')",
         }}
         aria-hidden="true"
       />

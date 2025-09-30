@@ -7,7 +7,6 @@ export default function Navbar() {
     () => [
       { label: "Home", id: "home" },
       { label: "About Me", id: "about" },
-      // Portfolio grid lives in Works.jsx with id="works"
       { label: "Portfolio", id: "works" },
       { label: "Services", id: "services" },
       { label: "Contact", id: "contact" },
@@ -93,7 +92,11 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-5" role="navigation" aria-label="Primary">
+          <nav
+            className="hidden md:flex items-center gap-5"
+            role="navigation"
+            aria-label="Primary"
+          >
             {navItems.map((item) => (
               <button
                 key={item.id}
