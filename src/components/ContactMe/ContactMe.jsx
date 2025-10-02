@@ -64,7 +64,7 @@ export default function ContactMe() {
             <div className="rounded-md overflow-hidden ring-1 ring-white/10">
               <iframe
                 title="Map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-0.128%2C51.507%2C-0.087%2C51.525&layer=mapnik"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-74.25909%2C40.477399%2C-73.700272%2C40.916178&layer=mapnik&marker=40.7128%2C-74.0060"
                 className="w-full h-36"
                 loading="lazy"
               />
@@ -73,10 +73,10 @@ export default function ContactMe() {
           {/* Email */}
           <div className="mt-8">
             <h4 className="text-xl font-bold text-[#111827]/80 fredoka">
-              Email
+              Phone Number
             </h4>
             <p className="mt-2 space-y-1 text-base text-[#111827] fredoka">
-              christophersoren@gmail.com
+              +8801722222222
             </p>
           </div>
         </div>

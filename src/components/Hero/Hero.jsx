@@ -50,8 +50,8 @@ export default function Hero() {
             into extraordinary
             <span className="relative whitespace-nowrap">
               {" "}
-              <span className="font-extrabold audiowide">experiences</span>
-              <span className="absolute left-0 -bottom-1 sm:-bottom-2 w-full h-[3px] sm:h-[4px] md:h-[6px] bg-white/80 rounded" />
+              <span className="">experiences</span>
+              {/* <span className="absolute left-0 -bottom-1 sm:-bottom-2 w-full h-[3px] sm:h-[4px] md:h-[6px] bg-white/80 rounded" /> */}
             </span>
             .
           </h1>

@@ -28,20 +28,6 @@ export default function AboutMe() {
                   to Raymond Blanc’s Le Manoir aux Quat’ Saisons in Oxfordshire,
                   England. His career across France, Italy, and Spain further
                   deepened his understanding of seasonality, terroir, and the
-                  dialogue between farmer, producer, and chef. Christopher’s
-                  cooking is defined by a vegetable-forward philosophy — not
-                  strictly vegetarian, but rooted in the belief that the garden
-                  should guide the plate. Seasonality and sustainability are not
-                  abstract ideals in his kitchen, but daily practices that shape
-                  menus and inspire creativity. He balances health and flMy Bio:
-                  Christopher Sorensen is a chef with more than 30 years of
-                  culinary experience, whose journey began as a teenager working
-                  in a neighborhood brasserie. That early spark set him on a
-                  path that has taken him through some of the world’s most
-                  respected kitchens, from Blue Hill at Stone Barns in New York
-                  to Raymond Blanc’s Le Manoir aux Quat’ Saisons in Oxfordshire,
-                  England. His career across France, Italy, and Spain further
-                  deepened his understanding of seasonality, terroir, and the
                   dialogue between farmer, producer, and chef.
                 </p>
                 <p>
@@ -59,19 +45,23 @@ export default function AboutMe() {
                   together classical European training, the rigor of world-class
                   kitchens, and a modern sensibility that celebrates healthy,
                   delicious food. His vision is clear: food should be honest,
-                  connected to nature, and crafted with both pleasure and
-                  responsibility in mind.
+                  connected to nature, and crafted wi Spain further deepened his
+                  understanding of seasonality, terroir, and the dialogue
+                  between farmer, producer, and chef. Christopher’s cooking is
+                  defined by a vegetable-forward philosophy — not strictly
+                  vegetarian, but rooted in the belief that the garden should
+                  guide the plate. Seasonality and sustainability are not
+                  abstract ideals in his kitchen, but daily practices that shape
+                  menus and inspire creativity. He balances health and flavor,
+                  creating dishes that are vibrant, nourishing, and grounded in
+                  a respect for ingredients at their peak. Drawing on three
+                  decades of experience, Christopher brings together classical
+                  European training, the rigor of world-class kitchens, and a
+                  modern sensibility that celebrates healthy, delicious food.
+                  His vision is clear: food should be honest, connected to
+                  nature, and crafted with both pleasure and responsibility in
+                  mind.
                 </p>
-                {/* <p>
-                  avor, creating dishes that are vibrant, nourishing, and
-                  grounded in a respect for ingredients at their peak. Drawing
-                  on three decades of experience, Christopher brings together
-                  classical European training, the rigor of world-class
-                  kitchens, and a modern sensibility that celebrates healthy,
-                  delicious food. His vision is clear: food should be honest,
-                  connected to nature, and crafted with both pleasure and
-                  responsibility in mind.
-                </p> */}
               </div>
             </div>
           </div>
@@ -80,4 +70,3 @@ export default function AboutMe() {
     </section>
   );
 }
-
