@@ -24,7 +24,7 @@ const services = [
   {
     title: "Meal Prep",
     desc: "Let me make eating healthy easy and delicious.",
-    img: "/fish2.jpg",
+    img: "/meal.jpg",
   },
 ];
 

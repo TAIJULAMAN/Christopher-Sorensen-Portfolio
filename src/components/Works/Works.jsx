@@ -19,7 +19,7 @@ const works = [
   {
     title: "Mediterranean Diet",
     caption: "Meat and fish have their place on the plate as well.",
-    img: "/meal.jpg",
+    img: "/fish2.jpg",
   },
 ];
 

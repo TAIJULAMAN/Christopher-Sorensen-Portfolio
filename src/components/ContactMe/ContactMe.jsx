@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Facebook,
   Instagram,
@@ -8,6 +9,35 @@ import {
 } from "lucide-react";
 
 export default function ContactMe() {
+  const formRef = useRef(null);
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const SERVICE_ID = "service_vyrm5he";
+  const TEMPLATE_ID = "template_k7i7qyz";
+  const PUBLIC_KEY = "OYyjWsKNdOyBTbrWE";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSuccess("");
+    setError("");
+    setSending(true);
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
+        publicKey: PUBLIC_KEY,
+      });
+      setSuccess("Message sent successfully.");
+      formRef.current?.reset();
+    } catch (err) {
+      // Surface detailed error if available
+      console.error("EmailJS send error:", err);
+      const msg = err?.text || err?.message || "Failed to send message. Please try again.";
+      setError(msg);
+    } finally {
+      setSending(false);
+    }
+  };
   return (
     <section
       id="contact"
@@ -76,7 +106,7 @@ export default function ContactMe() {
               Phone Number
             </h4>
             <p className="mt-2 space-y-1 text-base text-[#111827] fredoka">
-              +8801722222222
+             +1 603 380 1619
             </p>
           </div>
         </div>
@@ -89,7 +119,8 @@ export default function ContactMe() {
             <h1 className="text-[#111827] fredoka text-xl">Send a message</h1>
           </div>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            ref={formRef}
+            onSubmit={handleSubmit}
             className="mt-5 grid grid-cols-1 gap-4"
           >
             <div>
@@ -100,6 +131,7 @@ export default function ContactMe() {
                 type="text"
                 placeholder="Your name"
                 className="w-full fredoka text-[#111827] rounded-md border border-black/15 px-3 py-2"
+                name="from_name"
                 required
               />
             </div>
@@ -111,6 +143,7 @@ export default function ContactMe() {
                 type="email"
                 placeholder="you@example.com"
                 className="w-full fredoka text-[#111827] rounded-md border border-black/15 px-3 py-2"
+                name="from_email"
                 required
               />
             </div>
@@ -119,9 +152,10 @@ export default function ContactMe() {
                 Phone
               </label>
               <input
-                type="number"
+                type="tel"
                 placeholder="123-456-7890"
                 className="w-full fredoka text-[#111827] rounded-md border border-black/15 px-3 py-2"
+                name="phone"
                 required
               />
             </div>
@@ -133,17 +167,23 @@ export default function ContactMe() {
                 rows="6"
                 placeholder="How can I help?"
                 className="w-full fredoka text-[#111827] rounded-md border border-black/15 px-3 py-2"
+                name="message"
                 required
               />
             </div>
             <button
               type="submit"
               mailto="mdshahamanpatwary"
-              className="justify-center fredoka inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-md shadow shadow-orange-900/30 transition"
+              className="justify-center fredoka inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-md shadow shadow-orange-900/30 transition disabled:opacity-60"
+              disabled={sending}
             >
-              Submit
+              {sending ? "Sending..." : "Submit"}
               <ArrowRight className="w-4 h-4" />
             </button>
+            {success && (
+              <p className="text-green-600 fredoka text-sm">{success}</p>
+            )}
+            {error && <p className="text-red-600 fredoka text-sm">{error}</p>}
           </form>
         </div>
 
@@ -152,7 +192,7 @@ export default function ContactMe() {
           <img
             src="/contact.png"
             alt="Portrait"
-            className="w-full h-auto md:absolute md:inset-0 md:w-full md:h-full object-contain md:object-cover"
+            className="w-full h-auto md:absolute md:inset-0 md:w-full md:h-full object-cover"
           />
         </div>
       </div>
