@@ -14,8 +14,8 @@ export default function ContactMe() {
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
-  const SERVICE_ID = "service_vyrm5he";
-  const TEMPLATE_ID = "template_k7i7qyz";
+  const SERVICE_ID = "service_k7e4ewu";
+  const TEMPLATE_ID = "template_wf3m5s8";
   const PUBLIC_KEY = "OYyjWsKNdOyBTbrWE";
 
   const handleSubmit = async (e) => {
@@ -32,7 +32,10 @@ export default function ContactMe() {
     } catch (err) {
       // Surface detailed error if available
       console.error("EmailJS send error:", err);
-      const msg = err?.text || err?.message || "Failed to send message. Please try again.";
+      const msg =
+        err?.text ||
+        err?.message ||
+        "Failed to send message. Please try again.";
       setError(msg);
     } finally {
       setSending(false);
@@ -106,7 +109,7 @@ export default function ContactMe() {
               Phone Number
             </h4>
             <p className="mt-2 space-y-1 text-base text-[#111827] fredoka">
-             +1 603 380 1619
+              +1 603 380 1619
             </p>
           </div>
         </div>
@@ -173,7 +176,7 @@ export default function ContactMe() {
             </div>
             <button
               type="submit"
-              mailto="mdshahamanpatwary"
+              mailto="mdshahamanpatwary@gmail.com"
               className="justify-center fredoka inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 py-2.5 rounded-md shadow shadow-orange-900/30 transition disabled:opacity-60"
               disabled={sending}
             >
