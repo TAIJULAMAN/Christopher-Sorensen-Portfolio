@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-[85vh] sm:min-h-screen w-full overflow-hidden">
       {/* Background image — bright, airy farmers-market / fresh-produce shot */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -46,11 +46,12 @@ export default function Hero() {
       </svg>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-5 md:px-0 flex items-center justify-center min-h-[70vh] sm:min-h-[78vh] md:min-h-[82vh]">
+      <div className="relative z-10 container mx-auto px-5 sm:px-8 md:px-0 flex items-center justify-center min-h-[60vh] sm:min-h-[70vh] md:min-h-[82vh]">
         <div className="max-w-5xl text-white text-center">
-          <h1 className="text-xl md:text-6xl font-semibold actor leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold actor leading-snug sm:leading-tight">
             Elevating simple ingredients
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             into extraordinary
             <span className="relative whitespace-nowrap">
               {" "}
@@ -58,14 +59,14 @@ export default function Hero() {
             </span>
             .
           </h1>
-          <p className="my-5 md:my-5 text-sm sm:text-base md:text-lg fredoka text-center text-white/90">
+          <p className="my-4 sm:my-5 text-xs sm:text-sm md:text-base lg:text-lg fredoka text-center text-white/90 max-w-xl sm:max-w-none mx-auto">
             Where simplicity meets sophistication and every bite tells a story.
           </p>
 
           <div className="flex justify-center">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold text-sm sm:text-base px-6 sm:px-7 py-3 rounded-full shadow-lg shadow-emerald-900/30 transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold text-xs sm:text-sm md:text-base px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full shadow-lg shadow-emerald-900/30 transition-all"
             >
               Get In Touch
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
