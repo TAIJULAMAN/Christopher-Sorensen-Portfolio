@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Works from "./components/Works/Works";
 import Service from "./components/Service/Service";
+import Brands from "./components/Brands/Brands";
 import Footer from "./common/Footer/Footer";
 import Navbar from "./common/Navbar/Navbar";
 import ContactMe from "./components/ContactMe/ContactMe";
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <AboutMe />
       <Works />
+      <Brands />
       <Service />
       <ContactMe />
       <Footer />

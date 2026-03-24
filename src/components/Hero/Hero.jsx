@@ -4,21 +4,25 @@ import { ArrowRight } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Background image */}
+      {/* Background image — bright, airy farmers-market / fresh-produce shot */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/c2.jpeg')",
+          backgroundImage:
+            "url('/chef2.jpg')",
         }}
         aria-hidden="true"
       />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
+      {/* Green-tinted gradient overlay */}
+      <div
+        className="absolute"
+        aria-hidden="true"
+      />
 
-      {/* Hexagon overlay pattern (subtle) */}
+      {/* Hexagon overlay pattern (subtle green tint) */}
       <svg
-        className="absolute inset-0 w-full h-full opacity-30 mix-blend-overlay"
+        className="absolute inset-0 w-full h-full opacity-20 mix-blend-overlay"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid slice"
       >
@@ -33,7 +37,7 @@ export default function Hero() {
             <path
               d="M20 0 L40 11.547 L40 23.094 L20 34.64 L0 23.094 L0 11.547 Z"
               fill="none"
-              stroke="rgba(255,255,255,0.15)"
+              stroke="rgba(167,243,208,0.18)"
               strokeWidth="1"
             />
           </pattern>
@@ -51,7 +55,6 @@ export default function Hero() {
             <span className="relative whitespace-nowrap">
               {" "}
               <span className="">experiences</span>
-              {/* <span className="absolute left-0 -bottom-1 sm:-bottom-2 w-full h-[3px] sm:h-[4px] md:h-[6px] bg-white/80 rounded" /> */}
             </span>
             .
           </h1>
@@ -62,7 +65,7 @@ export default function Hero() {
           <div className="flex justify-center">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold text-sm sm:text-base px-6 sm:px-7 py-3 rounded-full shadow-lg shadow-orange-900/30 transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold text-sm sm:text-base px-6 sm:px-7 py-3 rounded-full shadow-lg shadow-emerald-900/30 transition-all"
             >
               Get In Touch
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />

@@ -76,7 +76,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-[9999] transition-colors duration-300 ${
         scrolled || isMobileMenuOpen
-          ? "backdrop-blur-md bg-black/40 border-b border-white/10"
+          ? "backdrop-blur-md bg-[#0a3d2c]/80 border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -103,8 +103,8 @@ export default function Navbar() {
                 onClick={() => handleNavigate(item)}
                 className={`text-sm font-bold transition-colors ${
                   active === item.label
-                    ? "text-orange-400 underline underline-offset-4"
-                    : "text-white hover:text-orange-300"
+                    ? "text-emerald-400 underline underline-offset-4"
+                    : "text-white hover:text-emerald-300"
                 }`}
               >
                 {item.label}
@@ -129,7 +129,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-top border-white/10 bg-black">
+          <div className="md:hidden border-top border-white/10 bg-[#0a3d2c]">
             <div className="px-4 py-3 space-y-1">
               {navItems.map((item) => (
                 <button
@@ -137,8 +137,8 @@ export default function Navbar() {
                   onClick={() => handleNavigate(item)}
                   className={`w-full text-left px-2 py-3 rounded text-sm font-medium transition-colors ${
                     active === item.label
-                      ? "text-orange-400"
-                      : "text-gray-200 hover:text-orange-300"
+                      ? "text-emerald-400"
+                      : "text-gray-200 hover:text-emerald-300"
                   }`}
                 >
                   {item.label}

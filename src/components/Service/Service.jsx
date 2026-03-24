@@ -26,6 +26,11 @@ const services = [
     desc: "Let me make eating healthy easy and delicious.",
     img: "/meal.jpg",
   },
+  {
+    title: "Food Styling",
+    desc: "Professional food styling for photoshoots, brands, cookbooks, and social media — making every dish look its absolute best.",
+    img: "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 
 export default function Service() {
@@ -53,7 +58,7 @@ export default function Service() {
               {/* Right list of services */}
               <div className="lg:col-span-8 md:border-l-2 border-white mb-10 ">
                 {/* Scrollable row on small screens, grid on large */}
-                <div className="flex gap-5 lg:pr-[200px] overflow-x-auto px-6 py-8 snap-x snap-mandatory lg:grid lg:grid-cols-5 lg:gap-5 lg:overflow-visible lg:px-8 lg:py-10">
+                <div className="flex gap-5 lg:pr-[200px] overflow-x-auto px-6 py-8 snap-x snap-mandatory lg:grid lg:grid-cols-6 lg:gap-5 lg:overflow-visible lg:px-8 lg:py-10">
                   {services.map((s) => (
                     <article
                       key={s.title}
