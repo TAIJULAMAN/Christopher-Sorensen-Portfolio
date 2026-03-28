@@ -103,15 +103,6 @@ export default function ContactMe() {
               />
             </div>
           </div>
-          {/* Email */}
-          <div className="mt-8">
-            <h4 className="text-xl font-bold text-[#111827]/80 fredoka">
-              Phone Number
-            </h4>
-            <p className="mt-2 space-y-1 text-base text-[#111827] fredoka">
-              +1 603 380 1619
-            </p>
-          </div>
         </div>
 
         {/* Part 2: Form */}

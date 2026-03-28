@@ -42,25 +42,11 @@ export default function AboutMe() {
                 </p>
                 <p>
                   Drawing on three decades of experience, Christopher brings
-                  together classical European training, the rigor of world-class
-                  kitchens, and a modern sensibility that celebrates healthy,
-                  delicious food. His vision is clear: food should be honest,
-                  connected to nature, and crafted wi Spain further deepened his
-                  understanding of seasonality, terroir, and the dialogue
-                  between farmer, producer, and chef. Christopher’s cooking is
-                  defined by a vegetable-forward philosophy — not strictly
-                  vegetarian, but rooted in the belief that the garden should
-                  guide the plate. Seasonality and sustainability are not
-                  abstract ideals in his kitchen, but daily practices that shape
-                  menus and inspire creativity. He balances health and flavor,
-                  creating dishes that are vibrant, nourishing, and grounded in
-                  a respect for ingredients at their peak. Drawing on three
-                  decades of experience, Christopher brings together classical
-                  European training, the rigor of world-class kitchens, and a
-                  modern sensibility that celebrates healthy, delicious food.
-                  His vision is clear: food should be honest, connected to
-                  nature, and crafted with both pleasure and responsibility in
-                  mind.
+                  together classical European training,
+                  the rigor of world-class kitchens, and a modern sensibility that
+                  celebrates healthy, delicious food.
+                  His vision is clear: food should be honest, connected to nature,
+                  and crafted with both pleasure and responsibility in mind.
                 </p>
               </div>
             </div>
